@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../otherpagecss/subscribe.css">
+    <link rel="shortcut icon" href="/images/asset-01.png" type="image/x-icon">
+    <title>Streamlab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./accets/logo.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="content" style="display: none;">\
+        <main>
+            <!-- REGISTERY SECTION -->
+            <section class="page-one" id="page_one">
+                <div class="SectionNumber">
+                    <div class="one">
+                        <p>Register</p>
+                        <div class="circle">1</div>
+                    </div>
+                    <div class="three">
+                        <p>Payment</p>
+                        <div class="circle">2</div>
+                    </div>
+                    <div class="four">
+                        <p>Complete</p>
+                        <div class="circle">3</div>
+                    </div>
+                    <div class="link"></div>
+                </div>
+                <h1 class="Topic">Subscribe</h1>
+                <label for="userName">Full Name</label>
+                <input type="text" id="userName" aria-autocomplete="both" autocomplete="name">
+                <label for="emailaddress">Email Address</label>
+                <input type="email" id="emailaddress" autocomplete="email">
+                <label for="userpassword">password</label>
+                <input type="password" id="userpassword" autocomplete="new-password">
+                <div class="drop" id="drop">
+                    <div id="premium">Premium <p>199$</p>
+                    </div>
+                    <div id="standard">Standard <p>99$</p>
+                    </div>
+                    <div id="basic">Basic <p>27$</p>
+                    </div>
+                </div>
+                <label for="level">Package</label>
+                <input name="" id="level" value="Premium" readonly"><i class="fa-solid fa-chevron-up up"></i>
+                <button id="continue">Continue<i class="fa-solid fa-angles-right"
+                        style="margin-top: 2px; margin-left: 5px;"></i></button>
+            </section>
+            <!-- THIRD SECTION BEGINS HERE -->
+            <!-- PAYMENT SECTION -->
+            <section class="page-three" id="page_three" hidden>
+                <div class="SectionNumber">
+                    <div class="one">
+                        <p>Register</p>
+                        <div class="circle"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                    <div class="three">
+                        <p>Payment</p>
+                        <div class="circle">2</div>
+                    </div>
+                    <div class="four">
+                        <p>Complete</p>
+                        <div class="circle">3</div>
+                    </div>
+                    <div class="link"></div>
+                </div>
+                <h1 class="Topic">Payment</h1>
+                <p class="info">Please fill out your payment details</p>
+                <div class="inpflexCarrier">
+                    <div class="insertion">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" placeholder="Card Number" maxlength="16">
+                        <label for="cardHolder">Card Holder</label>
+                        <input type="Name" id="cardHolder" placeholder="Card Holder">
+                        <div class="lfl">
+                            <label for="expDate" class="smalll">Expiration Date</label>
+                            <label for="cvc" class="smalll">CVC</label>
+                        </div>
+                        <div class="fl">
+                            <input type="date" name="" id="expDate" class="small">
+                            <input type="number" name="" id="cvc" class="small" placeholder="_ _ _" maxlength="3">
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div>
+                            <p id="ticketName">Premium</p>
+                            <p id="paymentPerDay">199$</p>
+                        </div>
+                        <div>
+                            <p>Amount</p>
+                            <input type="number" maxlength="1" placeholder="AMT" id="ticketQuantity">
+                        </div>
+                        <div>
+                            <p>Total</p>
+                            <p id="totalAmount">0$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonFlex">
+                    <button id="backBTN"><i class="fa-solid fa-angles-left"
+                            style="margin-top: 2px; margin-right: 5px;"></i>Back</button>
+                    <button id="continueToPageFour">Continue <i class="fa-solid fa-angles-right"
+                            style="margin-top: 2px; margin-left: 5px;"></i></button>
+                </div>
+            </section>
+            <!-- FIRTH SECTION BEGINS HERE -->
+            <!-- GO TO HOMEPAGE SECTION -->
+            <section class="page-four" id="page_four" hidden>
+                <div class="SectionNumber">
+                    <div class="one">
+                        <p>Register</p>
+                        <div class="circle"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                    <div class="three">
+                        <p>Payment</p>
+                        <div class="circle"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                    <div class="four">
+                        <p>Complete</p>
+                        <div class="circle">3</div>
+                    </div>
+                    <div class="link"></div>
+                </div>
+                <div class="bigVerify">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h1 class="Topic">Payment Complete</h1>
+                <p class="info">Thank you, your payment has been successful. <br>A payment confirmation has been sent
+                    to
+                    <br><strong id="receivedEmail"></strong>
+                </p>
+                <button id="goBTN">Go to home page</button>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+<section class="dots-container" id="dots-container"> <!-- Added id="dots-container" -->
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</section>
+
+<!-- SCRIPT -->
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, doc, getDoc, getDocs, query, where, updateDoc } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyAZdF_XPe6YzeOS9Y0wXgmjbB6LK917BiM",
+        authDomain: "movie-webapp-f1fbc.firebaseapp.com",
+        projectId: "movie-webapp-f1fbc",
+        storageBucket: "movie-webapp-f1fbc.appspot.com",
+        messagingSenderId: "884247801196",
+        appId: "1:884247801196:web:b754aef28ff51c46091749"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    const colRef = collection(db, "users");
+
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+            document.querySelector(".dots-container").style.display = "none"; // Change getElementById to querySelector
+            document.getElementById("content").style.display = "block";
+        }, 3000);
+    });
+
+    let amount = '150';
+    let ticketname = 'Premium';
+    let status = 199;
+    let formatAccountNumber = 0;
+
+    function proceedToPageTwo() {
+        let placeholderWriter = 'This Field is Required';
+        let index = 0;
+        if (userName.value && emailaddress.value && userpassword.value) {
+            page_one.hidden = true;
+            page_three.hidden = false;
+        } else {
+            let int = setInterval(() => {
+                userName.placeholder += placeholderWriter[index];
+                emailaddress.placeholder += placeholderWriter[index];
+                userpassword.placeholder += placeholderWriter[index];
+                index++;
+                if (index === placeholderWriter.length) {
+                    clearInterval(int);
+                }
+                cont.setAttribute('onclick', '');
+            }, 50);
+
+            setTimeout(() => {
+                index = placeholderWriter.length;
+                let ins = setInterval(() => {
+                    index--;
+                    placeholderWriter = placeholderWriter.slice(0, -1);
+                    userName.placeholder = placeholderWriter;
+                    emailaddress.placeholder = placeholderWriter;
+                    userpassword.placeholder = placeholderWriter;
+                    if (index === 0) {
+                        clearInterval(ins);
+                        index = 0;
+                        cont.setAttribute('onclick', 'proceedToPageTwo()');
+                    }
+                }, 50);
+            }, 2500);
+            setTimeout(() => {
+                placeholderWriter = 'This Field is Required';
+            }, 4200);
+        }
+    }
+
+    level.addEventListener('click', function () {
+        drop.style.display = 'block';
+        drop.style.animationName = 'translate';
+        drop.style.animationDuration = '.5s';
+        drop.style.animationTimingFunction = 'ease-Out';
+    });
+
+    document.getElementById("premium").addEventListener('click', function () {
+        changeLevel('Premium', 199);
+    });
+
+    document.getElementById("standard").addEventListener('click', function () {
+        changeLevel('Standard', 99);
+    });
+
+    document.getElementById("basic").addEventListener('click', function () {
+        changeLevel('Basic', 27);
+    });
+
+    function changeLevel(message, price) {
+        drop.style.animationName = 'fall';
+        drop.style.animationTimingFunction = 'linear';
+        drop.style.animationDuration = '.7s';
+        level.value = message;
+        ticketname = message;
+        ticketName.innerHTML = ticketname;
+        status = price;
+        paymentPerDay.innerHTML = status + '$';
+        totalAmount.innerHTML = (status * ticketQuantity.value) + '$';
+
+        setTimeout(() => {
+            drop.style.display = 'none';
+        }, 700);
+    }
+
+    document.getElementById("continue").addEventListener('click', function () {
+        var userName = document.getElementById("userName");
+        var emailaddress = document.getElementById("emailaddress");
+        var userpassword = document.getElementById("userpassword");
+
+        if (userName.value && emailaddress.value && userpassword.value) {
+            document.getElementById("page_one").hidden = true;
+            document.getElementById("page_three").hidden = false;
+        } else {
+            document.getElementById("continue").style.cursor = 'not-allowed';
+
+            const placeholderText = 'This Field is Required';
+
+            userName.placeholder = placeholderText;
+            emailaddress.placeholder = placeholderText;
+            userpassword.placeholder = placeholderText;
+
+            setTimeout(() => {
+                userName.placeholder = '';
+                emailaddress.placeholder = '';
+                userpassword.placeholder = '';
+                document.getElementById("continue").style.cursor = ''; // Reset cursor style
+            }, 2000);
+        }
+    });
+
+
+    document.getElementById('backBTN').addEventListener('click', function () {
+        document.getElementById("page_one").hidden = false;
+        document.getElementById("page_three").hidden = true;
+    });
+
+    document.getElementById('continueToPageFour').addEventListener('click', function () {
+        if (cardNumber.value && cardHolder.value && cvc.value && expDate.value && ticketQuantity.value >= 1) {
+            page_three.hidden = true;
+            page_four.hidden = false;
+            receivedEmail.innerHTML = emailaddress.value;
+        }
+    });
+
+    document.getElementById('ticketQuantity').addEventListener('input', function () {
+        if (ticketQuantity.value.length > ticketQuantity.maxLength) ticketQuantity.value = ticketQuantity.value.slice(0, ticketQuantity.maxLength);
+        totalAmount.innerHTML = status * ticketQuantity.value + '$';
+    });
+
+    document.getElementById('cvc').addEventListener('input', checkCvc);
+
+    function checkCvc() {
+        if (cvc.value.length > cvc.maxLength) cvc.value = cvc.value.slice(0, cvc.maxLength);
+    }
+
+    continueToPageFour.addEventListener('mouseover', function () {
+        if (cardNumber.value && cardHolder.value && cvc.value && expDate.value && ticketQuantity.value >= 1) {
+            continueToPageFour.style.cursor = 'pointer';
+        } else {
+            continueToPageFour.style.cursor = 'not-allowed';
+        }
+    });
+
+    goBTN.addEventListener('click', async function () {
+        try {
+            const user = auth.currentUser;
+            const userEmail = user.email;
+            console.log(userEmail);
+            if (userEmail) {
+                const querySnapshot = await getDocs(query(colRef, where("email", "==", userEmail)));
+                console.log(userEmail);
+                if (querySnapshot.isEmpty) {
+                    console.log('Could not find doc');
+                    return;
+                }
+                console.log(querySnapshot);
+                querySnapshot.forEach(async (userDetails) => {
+                    console.log(userDetails);
+                    let loginUserId = userDetails.id;
+                    console.log(loginUserId);
+                    const docRef = doc(colRef, userDetails.id);
+                    await updateDoc(docRef, { isSubscribed: 'true' });
+
+                    window.location.href = './moviehome.html';
+                });
+                 
+            }
+        } catch (error) {
+            console.error('Error updating isSubscribed:', error);
+        }
+    });
+
+
+</script>
+
+
+
+</html>

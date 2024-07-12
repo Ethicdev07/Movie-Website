@@ -1,0 +1,824 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-image: url(../images/asset-13.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+section {
+    width: 900px;
+    height: 650px;
+    background-color: rgb(52, 52, 52);
+    position: absolute;
+    border-radius: 20px;
+}
+
+section .SectionNumber {
+    width: 600px;
+    margin: auto;
+    margin-top: 50px;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+
+section .SectionNumber div {
+    height: inherit;
+    width: 140px;
+    color: #3A93EC;
+    font-weight: 700;
+    font-style: normal;
+    font-size: .8em;
+    text-align: center;
+}
+
+section .SectionNumber div .circle {
+    border: 1px solid #3A93EC;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45em;
+    background-color: rgb(52, 52, 52);
+    position: relative;
+    z-index: 2000;
+}
+
+section .SectionNumber .link {
+    width: 430px;
+    position: absolute;
+    border: 1px solid #3A93EC;
+    margin-top: 40px;
+    z-index: 1;
+}
+
+.page-one .SectionNumber .one {
+    font-weight: 600;
+    color: #3A93EC;
+}
+
+.page-one .SectionNumber .one .circle {
+    border-color: #3A93EC;
+    border-width: 2.5px;
+    color: #3A93EC;
+    font-size: 1.3em;
+}
+
+section .Topic {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+.page-one label {
+    display: block;
+    width: 400px;
+    margin: auto;
+    margin-top: 30px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: .8em;
+    color: #3A93EC;
+    cursor: pointer;
+}
+
+.page-one input {
+    display: block;
+    height: 40px;
+    width: 400px;
+    margin: auto;
+    margin-top: 3px;
+    border-radius: 10px;
+    border: 1.5px solid #3A93EC;
+    background-color: transparent;
+    color: #3A93EC;
+    padding-left: 10px;
+}
+
+.page-one {
+    position: relative;
+}
+
+.page-one .drop {
+    width: 400px;
+    position: sticky;
+    height: 150px;
+    position: absolute;
+    margin-left: calc(50% - 200px);
+    margin-top: -63px;
+    border-radius: 10px;
+    background-color: #3A93EC;
+    display: none;
+    z-index: 100;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes translate {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+}
+
+.page-one .drop div {
+    width: 100%;
+    border: 2px solid rgb(52, 52, 52);
+    height: 50px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+    color: rgb(52, 52, 52);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    z-index: 1000;
+}
+
+.page-one .drop div p {
+    margin-right: 20px;
+}
+
+.page-one .drop div:nth-of-type(3) {
+    border-bottom: none;
+}
+
+.page-one .drop div:hover {
+    animation: color .1s ease-out forwards;
+}
+
+@keyframes color {
+    to {
+        background-color: rgb(52, 52, 52);
+        border: 2px solid #3A93EC;
+        border-radius: 10px;
+        color: #3A93EC;
+    }
+}
+
+.up {
+    position: absolute;
+    color: #3A93EC;
+    margin-left: 68%;
+    margin-top: -28px;
+    z-index: 1;
+}
+
+.page-one input:focus {
+    outline: none;
+    border: 2.5px solid #3A93EC;
+}
+
+.page-one input::placeholder {
+    color: #3A93EC;
+}
+
+.page-one #level {
+    cursor: pointer;
+}
+
+.page-one #level:focus {
+    border: 1.5px solid #3A93EC;
+}
+
+.page-one button {
+    background-color: #3A93EC;
+    color: rgb(52, 52, 52);
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.01em;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.page-three .SectionNumber .one .circle,
+.page-three .SectionNumber .two .circle {
+    background-color: #3A93EC;
+    color: rgb(52, 52, 52);
+}
+
+.page-three .SectionNumber .three .circle {
+    border-color: #3A93EC;
+    border-width: 3px;
+    color: #3A93EC;
+    font-size: 1.3em;
+}
+
+.page-three .SectionNumber .three {
+    color: #3A93EC;
+}
+
+.page-three .info {
+    text-align: center;
+    color: #3A93EC;
+    font-size: .9em;
+    margin-top: 5px;
+}
+
+.page-three .inpflexCarrier {
+    height: 300px;
+    margin: auto;
+    width: 90%;
+    margin-top: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page-three .inpflexCarrier div {
+    width: 47%;
+}
+
+.page-three .inpflexCarrier .insertion {
+    margin-top: -50px;
+}
+
+.page-three .inpflexCarrier .insertion input {
+    display: block;
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 40px;
+    background-color: #3A93EC;
+    border: medium solid #3A93EC;
+    margin-top: 5px;
+    color: rgb(52, 52, 52);
+    padding-left: 15px;
+    font-weight: 600;
+}
+
+.page-three .inpflexCarrier .insertion input::placeholder {
+    visibility: hidden;
+}
+
+.page-three .inpflexCarrier .insertion input:focus {
+    outline: none;
+}
+
+.page-three .inpflexCarrier .insertion label {
+    width: 300px;
+    margin-left: 40px;
+    color: #3A93EC;
+    font-size: .8em;
+    font-weight: 700;
+    display: block;
+    margin-top: 10px;
+}
+
+.page-three .inpflexCarrier .insertion .small::placeholder {
+    visibility: visible;
+}
+
+.page-three .inpflexCarrier .insertion .smalll {
+    width: 140px;
+    font-size: .7em;
+    margin-left: 0;
+}
+
+.page-three .inpflexCarrier .insertion .smalll:nth-of-type(2) {
+    margin-left: 38px;
+}
+
+.page-three .inpflexCarrier .insertion .fl {
+    display: flex;
+    width: 300px;
+    margin-left: 40px;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-three .inpflexCarrier .insertion .lfl {
+    display: flex;
+    width: 300px;
+    margin-left: 40px;
+    align-items: center;
+}
+
+.page-three .inpflexCarrier .insertion .small {
+    width: 130px;
+    margin: 0;
+}
+
+.page-three .detail {
+    height: 200px;
+    border-radius: 10px;
+    border: medium solid #3A93EC;
+}
+
+.page-three .detail div {
+    border-bottom: 2px solid #3A93EC;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #3A93EC;
+    
+}
+
+.page-three .detail div input {
+    width: 50px;
+    text-align: center;
+    background-color: transparent;
+    border: thin solid #3A93EC;
+    border-radius: 5px 5px 0px 0px;
+    color: #3A93EC;
+    
+}
+
+.page-three .detail div input:focus {
+    outline: none;
+}
+
+.page-three .buttonFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.page-three button {
+    background-color: rgb(52, 52, 52);
+    color: #3A93EC;
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+    border: thin solid #3A93EC;
+    border-radius: 10px;
+    font-size: 1.01em;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.page-three .insertion fieldset {
+    border: none;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    font-size: .9em;
+}
+
+.page-three .insertion fieldset legend {
+    margin-left: 30px;
+    color: #e0cf32;
+    display: none;
+}
+
+.page-three button:nth-of-type(2) {
+    background-color: #3A93EC;
+    color: rgb(52, 52, 52);
+    cursor: pointer;
+}
+
+.page-four .SectionNumber .one .circle,
+.page-four .SectionNumber .two .circle,
+.page-four .SectionNumber .three .circle {
+    background-color: #3A93EC;
+    color: rgb(52, 52, 52);
+}
+
+.page-four .SectionNumber .four .circle {
+    border-color: #3A93EC;
+    border-width: 3px;
+    color: #3A93EC;
+    font-size: 1.3em;
+}
+
+.page-four .SectionNumber .four {
+    color: #3A93EC;
+}
+
+.page-four .bigVerify {
+    border: 2px solid #3A93EC;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3A93EC;
+    margin: auto;
+    font-size: 3em;
+    margin-top: 60px;
+}
+
+.page-four .info {
+    text-align: center;
+    color: #3A93EC;
+    font-size: .9em;
+    margin-top: 30px;
+    line-height: 20px;
+}
+
+.page-four button {
+    background-color: #3A93EC;
+    color: rgb(52, 52, 52);
+    font-weight: 600;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.01em;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    cursor: pointer;
+    word-spacing: 1px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media (max-width: 925px) {
+    section {
+        height: 600px;
+        width: 98%;
+    }
+
+    .page-one label {
+        margin-top: 10px;
+    }
+
+    .up {
+        display: none;
+        visibility: hidden;
+    }
+
+    .page-two .Topic {
+        margin-top: 10px;
+    }
+
+    .page-two {
+        position: relative;
+    }
+
+    .page-two .flexCarrier {
+        width: 610px;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .page-two .flexCarrier div {
+        width: 40%;
+        overflow-x: auto;
+    }
+
+    .page-three .inpflexCarrier {
+        width: 97%;
+    }
+
+    .page-three .inpflexCarrier .insertion input {
+        margin-left: 5px;
+        width: 250px;
+    }
+
+    .page-three .inpflexCarrier .insertion .fl {
+        margin-left: 5px;
+        width: 250px;
+    }
+
+    .page-three .inpflexCarrier .insertion label {
+        margin-left: 5px;
+        width: 250px;
+    }
+
+    .page-three .inpflexCarrier .insertion .lfl {
+        margin-left: 7px;
+    }
+
+    .page-three .inpflexCarrier .insertion .small {
+        width: 120px;
+    }
+
+    .page-three .inpflexCarrier .insertion .smalll:nth-of-type(2) {
+        margin-left: -10px;
+    }
+
+    .page-three .detail {
+        width: 9000px;
+    }
+
+    .page-two .flexCarrier div:nth-of-type(2) .line {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 620px) {
+    section .SectionNumber {
+        width: 92%;
+    }
+
+    section .SectionNumber .link {
+        width: 65%;
+    }
+
+    .page-two .flexCarrier {
+        width: 440px;
+        align-items: center;
+    }
+
+    .page-two .flexCarrier div {
+        width: 49%;
+        height: 200px;
+        position: relative;
+    }
+
+    .page-two .flexCarrier div p {
+        font-size: 1em;
+    }
+
+    .page-two .flexCarrier div .line,
+    .page-two .flexCarrier div h3 {
+        display: none;
+    }
+
+    .page-two .flexCarrier div .selectIndicator {
+        display: flex;
+        margin-top: -150px;
+        margin-left: calc(90% - 30px);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page-three .detail {
+        font-size: .8em;
+        height: 150px;
+    }
+
+    .page-three .inpflexCarrier {
+        display: block;
+    }
+
+    .page-three .inpflexCarrier .insertion label {
+        display: none;
+    }
+
+    .page-three .inpflexCarrier div {
+        width: 90%;
+        margin: auto;
+        margin-top: 25px;
+    }
+
+    .page-three .inpflexCarrier .insertion .lfl {
+        height: 10px;
+        margin-top: 0px;
+        margin: auto;
+        width: 250px;
+        justify-content: space-evenly;
+    }
+
+    .page-three .inpflexCarrier .insertion .lfl label {
+        display: block;
+    }
+
+    .page-three .inpflexCarrier .insertion .lfl label:nth-of-type(2) {
+        margin-left: 10%;
+    }
+
+    .page-three .inpflexCarrier .insertion .fl {
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .page-three .inpflexCarrier .insertion input {
+        display: inline;
+        margin-top: 30px;
+        width: 48%;
+    }
+
+    .page-three .buttonFlex {
+        margin-top: 30px;
+    }
+
+    .page-three .inpflexCarrier .insertion input::placeholder {
+        visibility: visible;
+        color: rgb(52, 52, 52);
+    }
+}
+
+@media (max-width: 450px) {
+    .page-one input {
+        width: 80%;
+    }
+
+    .page-one label {
+        width: 80%;
+    }
+
+    .page-two .flexCarrier {
+        display: block;
+        width: 100%;
+    }
+
+    .page-two .flexCarrier div {
+        height: 150px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .page-two .flexCarrier div p {
+        margin-top: 5px;
+    }
+
+    .page-two .flexCarrier div:nth-last-of-type(1) {
+        margin-top: 10px;
+    }
+
+    .page-two .flexCarrier div .selectIndicator {
+        margin-top: -110px;
+    }
+
+    .page-three .inpflexCarrier .insertion input {
+        display: block;
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .page-one .drop {
+        width: 80%;
+        margin-left: calc(50% - 40%);
+    }
+
+    .page-three .buttonFlex {
+        margin-top: 50px;
+    }
+
+    .page-three .info {
+        visibility: hidden;
+        text-wrap: wrap;
+    }
+}
+
+@media (max-width: 355px) {
+    section .SectionNumber div p {
+        display: none;
+    }
+
+    section .SectionNumber .link {
+        margin-top: 25px;
+    }
+
+    .page-two .flexCarrier div {
+        width: 95%;
+        height: 170px;
+    }
+
+    .page-two .buttonFlex {
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .page-two button {
+        background-color: rgb(52, 52, 52);
+        color: #3A93EC;
+        font-weight: 600;
+        width: 100px;
+        height: 30px;
+        border: thin solid #3A93EC;
+        border-radius: 10px;
+        font-size: 1.01em;
+        display: inline;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page-two .flexCarrier div .selectIndicator {
+        margin-top: -120px;
+    }
+
+    .page-three .buttonFlex {
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .page-three button {
+        background-color: rgb(52, 52, 52);
+        color: #3A93EC;
+        font-weight: 600;
+        width: 100px;
+        height: 30px;
+        border: thin solid #3A93EC;
+        border-radius: 10px;
+        font-size: 1.01em;
+        display: inline;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page-three .flexCarrier div .selectIndicator {
+        margin-top: -120px;
+    }
+}
+
+.dots-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    background-color: transparent;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #b3d4fc;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:last-child {
+    margin-right: 0;
+}
+
+.dot:nth-child(1) {
+    animation-delay: -0.3s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: -0.1s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        background-color: #b3d4fc;
+        box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    }
+
+    50% {
+        transform: scale(1.2);
+        background-color: #6793fb;
+        box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+    }
+
+    100% {
+        transform: scale(0.8);
+        background-color: #b3d4fc;
+        box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    }
+}

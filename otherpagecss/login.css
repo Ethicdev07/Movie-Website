@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-image: url(../images/asset-021.jpeg);
+    /* height: 100vh; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 50%;
+    margin: 100px auto;
+    background-color: #0A0E17;
+}
+
+.sub-contain {
+    padding: 10px;
+}
+
+.textspan {
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.textspan h2 {
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #064ce2;
+}
+
+.textspan span {
+    font-size: 1rem;
+}
+
+.login-input {
+    margin: 20px auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+    flex-wrap: wrap;
+}
+
+.login-input input {
+    padding: 10px;
+    width: calc(100% - 30px);
+    background: aliceblue;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+}
+
+.login-input input:focus {
+    color: #064ce2;
+    background: #182031;
+}
+
+.btm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btm button {
+    padding: 8px;
+    width: 150px;
+    color: #fff;
+    background: #082155b0;
+    font-size: 18px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.btm button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #064ce2;
+    height: 100%;
+    width: 00%;
+    z-index: -1;
+    transition: .3s;
+}
+
+.btm button:hover::before {
+    width: 100%;
+}
+
+.log-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.log-2 span {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.log-2 button {
+    padding: 8px;
+    width: 80px;
+    color: #fff;
+    background: #0a4bd6b0;
+    font-size: 13px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.log-2 button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #05215c;
+    height: 100%;
+    width: 00%;
+    z-index: -1;
+    transition: .3s;
+}
+
+.log-2 button:hover::before {
+    width: 100%;
+}
+.custom-alert {
+    position: fixed;
+    top: 20%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #f44336; /* Red color, change as needed */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    transition: transform 4s ease-in-out;
+    z-index: 1000; /* Ensure it's above other elements */
+    visibility: hidden;
+}
+
+.show-alert {
+    transform: translateY(-50%) translateX(100%);
+    visibility: visible;
+}
+
+
+
+
+
+
+
+/* ---media-query--- */
+@media(max-width:1280px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media(max-width:884px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media(max-width:834px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media(max-width:820px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media(max-width:768px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media(max-width:650px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media(max-width:425px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media(max-width:376px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media(max-width:325px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media(max-width:320px) {
+    .container {
+        width: 100%;
+    }
+}

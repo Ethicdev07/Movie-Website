@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #121b46;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #141b29ea;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100px;
+    padding: 30px 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    z-index: 100;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    gap: 1em;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .btn {
+    width: 80px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border: thin solid white;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.login .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e8e7e7;
+    height: 100%;
+    width: 00%;
+    z-index: -1;
+    transition: .3s;
+}
+
+.login .btn:hover {
+    color: #121b46;
+}
+
+.login .btn:hover:before {
+    width: 100%;
+}
+
+.signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin .btn {
+    width: 88px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    border: thin solid white;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.signin .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e8e7e7;
+    height: 100%;
+    width: 00%;
+    z-index: -1;
+    transition: .3s;
+}
+
+.signin .btn:hover {
+    color: #121b46;
+}
+
+.signin .btn:hover:before {
+    width: 100%;
+}
+
+.logo a img {
+    width: 150px;
+}
+
+.background {
+    background-image: url(./images/asset-031.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: calc(100vh);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    padding-top: 150px;
+    opacity: 1;
+    animation: fadeIn 5s forwards;
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+section h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #e8e7e7;
+    z-index: 100;
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+    margin-top: 60px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.8s;
+}
+section h1 span{
+    color: #3A93EC;
+    font-size: 35px;
+    font-weight: 700;
+}
+section p {
+    text-align: center;
+    color: #b3d4fc;
+    font-size: 18px;
+    font-weight: 700;
+    width: 85%;
+    margin: 50px auto;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 1.5s;
+}
+
+
+section button {
+    display: block;
+    margin: auto;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 7px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+section button:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+}
+
+section button:hover i {
+    transform: translateX(5px);
+    transition: transform 0.5s;
+}
+
+
+
+.bar-drop {
+    font-size: 26px;
+    font-weight: 500;
+    border: thin solid #3A93EC;
+    border: none;
+    padding: 4px;
+    color: #fff;
+    background: #3A93EC;
+    display: none;
+}
+
+
+
+
+.dots-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 300px auto;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #b3d4fc;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:last-child {
+    margin-right: 0;
+}
+
+.dot:nth-child(1) {
+    animation-delay: -0.3s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: -0.1s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        background-color: #b3d4fc;
+        box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    }
+
+    50% {
+        transform: scale(1.2);
+        background-color: #6793fb;
+        box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+    }
+
+    100% {
+        transform: scale(0.8);
+        background-color: #b3d4fc;
+        box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    }
+}
+
+.header2 {
+    display: none;
+}
+
+
+
+
+
+
+/* ----MEDIA QUERY---- */
+
+@media(max-width:449px) {
+    section button {
+        margin-top: 5px;
+    }
+
+    section p {
+        margin: 10px auto;
+    }
+
+    .header2 {
+        position: absolute;
+        top: 80%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menubut {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header2 .but {
+        display: block;
+        margin: 10px auto;
+        padding: 8px;
+        width: 80px;
+        /* color: white; */
+        font-size: 18px;
+        font-weight: 700;
+        border: thin solid white;
+        outline: none;
+        border: none;
+        z-index: 5;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .header2 .but::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* background: #121b46; */
+        height: 100%;
+        width: 0%;
+        z-index: 1;
+        transition: .3s;
+    }
+
+    .header2 .but:hover {
+        color: #121b46;
+    }
+
+    .header2 .but:hover::before {
+        width: 100%;
+    }
+
+    .header2 .but:hover::after {
+        background: #121b46;
+    }
+
+    .bar-drop {
+        display: block;
+    }
+
+    .login .btn {
+        display: none;
+    }
+
+    .signin .btn {
+        display: none;
+    }
+}
+
+@media(max-width:343px) {
+    section h1 {
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:320px) {
+    section h1 {
+        margin-top: 2px;
+        text-align: center;
+    }
+    section h1 span {
+        text-align: center;
+    }
+}
