@@ -65,7 +65,7 @@ body {
     height: 100%;
     width: 00%;
     z-index: -1;
-    transition: .3s;
+    transition: .3s; 
 }
 
 .login .btn:hover {

@@ -160,7 +160,7 @@
         customAlert.classList.add('show-alert');
         setTimeout(() => {
             customAlert.classList.remove('show-alert');
-        }, 20000);
+        }, 50000);
     }
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -192,7 +192,7 @@
                     lastname: signUpForm.lastname.value,
                     password: password,
                     repeatpassword: signUpForm.repeatpassword.value,
-                    isSubscribed: 'false',
+                    isSubscribed:false,
                 });
                 showAlert('Signup successful');
                 console.log('Document successfully created');
